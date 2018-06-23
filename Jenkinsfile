@@ -9,12 +9,10 @@ pipeline {
     MAVEN_OPTS = '-Djansi.force=true'
   }
 
-
   stages {
     stage('Unit Tests') {
       steps {
-        echo "TERM=${env.TERM}"
-        echo 'something that outputs ansi colored stuff'
+        echo "Hello \u001B[31mRed\u001B[m"
         sh 'ant -f test.xml -v'
         junit 'reports/result.xml'
       }
