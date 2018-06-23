@@ -1,7 +1,7 @@
 pipeline {
   agent any
-  
   ansiColor('xterm') {
+
     stages {
       stage('Unit Tests') {
         steps {
