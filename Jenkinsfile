@@ -4,6 +4,7 @@ pipeline {
       stage('Unit Tests') {
         steps {
             ansiColor('xterm') {
+              echo 'something that outputs ansi colored stuff'
               sh 'ant -f test.xml -v'
               junit 'reports/result.xml'
             }
