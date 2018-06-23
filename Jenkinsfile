@@ -5,6 +5,11 @@ pipeline {
       ansiColor('xterm')
   }
 
+  environment {
+    MAVEN_OPTS = '-Djansi.force=true'
+  }
+
+
   stages {
     stage('Unit Tests') {
       steps {
